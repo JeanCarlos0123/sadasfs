@@ -1,39 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-nav {
-    background-color: #666;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-}
-
-section {
-    padding: 20px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
+:root{
+    --cor-de-fundo: #33424b;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #380000d7;
+    --botao-inativo: rgba(0, 0, 0, 0.5);
+    --texto-fundo: rgba(255, 255, 255, 0.3);
+    
+    }
+    
+    body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: "Chakra Petch", sans-serif;
+    
+    }
+    
+    .conteudo-principal{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
     width: 100%;
-}
+    margin: 0 auto;
+    }
+    
+    .titulo-principal{
+    
+    text-align: Center;
+    width: 100%;
+    font-size: 52px;
+    
+    }
+    
+    .titulo-principal span{
+    color: var(--verde)
+    }
+    
+    .botao{
+    font-family: "Crakra Petch", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 4px solid var(--botao-ativo);
+    border-left: 2px solid var(--botao-ativo);
+    border-right: 2px solid var(--botao-ativo);
+    border-top: none;
+    }
+    
+    .botao:first-child{
+    border-radius: 40px 40px 0 0;
+    }
+    
+    .botoes {
+    display: block;
+    }
+    
+    @media screen and (min-width: 768px) {
+    .botoes{
+    display: flex;
+    }
+    .botao:first-child {
+    border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+    border-radius: 0 40px 0 0;
+    }
+    }
